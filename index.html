@@ -169,29 +169,13 @@
           <div class="content has-text-justified">
             <p>
               Machine learning classification models trained with empirical risk minimization (ERM) often inadvertently rely on spurious correlations. When absent in the test data, these unintended associations between non-target attributes and target labels lead to poor generalization.
-            </p>
-
-            <p>
-              This paper addresses this problem from a model optimization perspective and proposes a novel method, 
-              <u>G</u>radient <u>E</u>xtrapolation for Debiased <u>R</u>epresentatio<u>n</u> L<u>e</u>arning (GERNE), 
-              designed to learn debiased representations in both known and unknown attribute training cases. 
-            </p>
-
-            <p>
+              This paper addresses this problem from a model optimization perspective and proposes a novel method, <u>G</u>radient <u>E</u>xtrapolation for Debiased <u>R</u>epresentatio<u>n</u> L<u>e</u>arning (GERNE), designed to learn debiased representations in both known and unknown attribute training cases. 
               GERNE uses two distinct batches with different amounts of spurious correlations and defines the target gradient as a linear extrapolation of the gradients computed from each batch's loss. Our analysis shows that when the extrapolated gradient points toward the batch gradient with fewer spurious correlations, it effectively guides training toward learning a debiased model.
-            </p>
-
-            <p>
               GERNE serves as a general framework for debiasing, encompassing methods such as ERM, reweighting, and resampling, as special cases. 
               We derive the theoretical upper and lower bounds of the extrapolation factor employed by GERNE. By tuning this factor, GERNE can adapt to maximize either Group-Balanced Accuracy (GBA) or Worst-Group Accuracy (WGA). 
               We validate the proposed approach on five vision and one NLP benchmarks, demonstrating competitive and often superior performance compared to state-of-the-art baselines.
+              The code is available at: <a href="https://gerne-debias.github.io/" target="_blank">https://gerne-debias.github.io/</a>
             </p>
-
-            <p>
-              The code is available at: 
-              <a href="https://gerne-debias.github.io/" target="_blank">https://gerne-debias.github.io/</a>
-            </p>
-
           </div>
         </div>
       </div>
