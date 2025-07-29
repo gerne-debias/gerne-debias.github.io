@@ -142,24 +142,6 @@
     </div>
     </div>
   </section>
-
-  <!-- <section class="section">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <div class="content">
-            <div class="publication-video">
-              <iframe title="Teaser Video" src="./static/videos/TeaserWebsiteC.mp4" frameborder="0" frameborder="0" allow="autoplay; encrypted-media; muted" allowfullscreen width="800"></iframe>
-            </div>
-            <p style="font-size: 0.95rem;" class="is-centered">
-              <strong>Bridging the gap between mimics and muscles:</strong>
-              Our method <strong style="color: rgb(83, 83, 207);">EIFER</strong> utilizes neural unpaired image-to-image translation to decouple facial geometry and appearance for muscle-activity-based expression synthesis and electrode-free facial electromyography.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
   <section class="section">
     <div class="container is-max-desktop">
       <!-- Abstract. -->
@@ -181,105 +163,6 @@
       </div>
     </div>
   </section>
-
-  <section class="hero is-light is-small">
-    <div class="hero-body">
-      <div class="container">
-        <h2 class="title is-3">Main Insights</h2>
-        <div id="results-carousel" class="carousel results-carousel">
-          <div class="item">
-            <img src="./static/images/eifer_qualitative.jpg" alt="Geometry Reconstruction Experiments" />
-            <div class="caption">
-              <strong>Facial Geometry Reconstruction</strong>
-              <br>
-              Our method <strong>EIFER</strong> faithfully reconstructs the facial geometry under strong sEMG electrode occlusion.
-              It correctly captures the expression, identity, and pose of the subject.
-              Existing methods struggle to align the face due to already misaligned landmark placements.
-              Further, the identity parameters diverge even with the same person, making them unsuitable for our task.
-            </div>
-          </div>
-          <div class="item">
-            <img src="./static/images/eifer_qualitative_recon.jpg" alt="Appearance Reconstruction Experiments" />
-            <div class="caption">
-              <strong>Facial Appearance Reconstruction</strong>
-              <br>
-              Our method separates the facial appearance from the geometry, allowing for faithful reconstruction of the skin texture, lighting, and occluded electrodes.
-              While existing methods inherently restore the occluded regions due to the utilized appearance model, our method creates more photorealistic results due to the adversarial cyclic training.
-            </div>
-          </div>
-          <div class="item">
-            <img src="./static/images/eifer_exp2emg.jpg" alt="Electrode-Free Facial EMG" />
-            <div class="caption">
-              <strong>Electrode-Free Facial EMG</strong>
-              <br>
-              Our method allows for the prediction of muscle activity based on observed facial expressions, this is a new paradigm for <strong>electrode-free facial electromyography</strong>.
-              This enables the reconstruction of muscle activity without the need for electrodes, providing a new way to analyze facial expressions.
-              We demonstrate that our method can predict muscle activity from observed expressions and synthesize expressions based on muscle activity.
-              We provide next to <strong>EIFER</strong> several <strong>Exp2EMG</strong> models for existing extractors like <strong>DECA</strong>, <strong>EMOCAv2</strong>, <strong>SMIRK</strong>,<strong>Deep3DFace</strong>, and <strong>FOCUS</strong>.
-              Hence, both <strong>FLAME</strong> and <strong>BFM</strong> expression spaces are connected to the muscle activity.
-            </div>
-          </div>
-          <div class="item">
-            <img src="./static/images/eifer_emg2exp.jpg" alt="Expression Synthesis" />
-            <div class="caption">
-              <strong>Expression Synthesis</strong>
-              <br>
-              In the second phase of <strong>EIFER</strong> we learn to synthesize facial expressions based on muscle activity.
-              This allows to generate expression based solely on muscle activity and provides a new way to analyze facial expressions, especially interesting for possible advances in camera-free animation captures.
-              While <strong>EIFER</strong> creates the most realistic results, we will also publish EMG2Exp of <strong>MC-CycleGAN+Model</strong> combinations.
-              Therefore, both the expression space of both <strong>FLAME</strong> and <strong>BFM</strong> are now connected to the muscle activity.
-            </div>
-          </div>
-          <div class="item">
-            <img src="./static/images/01_face-at-rest_Geo.jpg" alt="Expression Synthesis" />
-            <div class="caption">
-              <strong>More Geometry Examples - Fact At Rest</strong>
-              <br>
-              Our method <strong>EIFER</strong> faithfully reconstructs the facial geometry under strong sEMG electrode occlusion.
-              This example shows the face at rest, where the subject is not performing any facial expression.
-            </div>
-          </div>
-          <div class="item">
-            <img src="./static/images/02_eye-tight_Geo.jpg" alt="Expression Synthesis" />
-            <div class="caption">
-              <strong>More Geometry Examples - Eyes closed tightly</strong>
-              <br>
-              Our method <strong>EIFER</strong> faithfully reconstructs the facial geometry under strong sEMG electrode occlusion.
-              This example shows the subject closing their eyes tightly, which is a challenging due to the similarity of a soft eye closure or rapid blinking.
-            </div>
-          </div>
-          <div class="item">
-            <img src="./static/images/03_smile-open_Geo.jpg" alt="Expression Synthesis" />
-            <div class="caption">
-              <strong>More Geometry Examples - Smile Open</strong>
-              <br>
-              Our method <strong>EIFER</strong> faithfully reconstructs the facial geometry under strong sEMG electrode occlusion.
-              This example shows the subject smiling with their mouth open, which is a challenging as the mouth inside should not be visible.
-            </div>
-          </div>
-          <div class="item">
-            <img src="./static/images/04_snarl_Geo.jpg" alt="Expression Synthesis" />
-            <div class="caption">
-              <strong>More Geometry Examples - Snarl</strong>
-              <br>
-              Our method <strong>EIFER</strong> faithfully reconstructs the facial geometry under strong sEMG electrode occlusion.
-              This example shows the subject snarling, which is a challenging expression due to the wrinkles and the mouth opening downwards.
-            </div>
-          </div>
-          <div class="item">
-            <img src="./static/images/05_nose_Geo.jpg" alt="Expression Synthesis" />
-            <div class="caption">
-              <strong>More Geometry Examples - Nose wrinkling</strong>
-              <br>
-              Our method <strong>EIFER</strong> faithfully reconstructs the facial geometry under strong sEMG electrode occlusion.
-              This example shows the subject wrinkling their nose, which is a challenging expression due to the wrinkles only the nose bridge and forehead (glabella) should be affected.
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
@@ -293,70 +176,29 @@
                 (b) Visualization of batch construction. <em>B<sub>b</sub></em> shows a biased batch where the majority of images from class y=1 (top row) have attribute a=1 (yellow), and most images from class y=2 (bottom row) have attribute a=2 (light-blue). <em>B<sub>lb</sub></em> represents a less biased batch, with a more balanced attribute distribution within each class, controlled by <em>c</em> (here c=1/2). <em>B<sub>rs</sub></em> depicts a group-balanced distribution and refers to a batch sampled using the Resampling method. <em>B<sub>ext</sub></em> simulates GERNE's batch with c · (β + 1) > 1, where the dataset’s minority group appears as the majority in the batch.<br>
                 (c) A simplified 2D representation of gradient extrapolation where θ ∈ ℝ². ∇<sub>θ</sub>ℒ<sub>b</sub> is the gradient computed on <em>B<sub>b</sub></em>; training with this gradient is equivalent to training with the ERM objective. ∇<sub>θ</sub>ℒ<sub>lb</sub> is computed on <em>B<sub>lb</sub></em>. ∇<sub>θ</sub>ℒ<sub>rs</sub> is the gradient computed on <em>B<sub>rs</sub></em>, which is equivalent to an extrapolated gradient with c · (β + 1) = 1. Finally, ∇<sub>θ</sub>ℒ<sub>ext</sub> is our extrapolated gradient, with the extrapolation factor β modulating the degree of debiasing in conjunction with the strength of spurious correlations in the dataset.
               </p>
-              <!-- <h4 class="title">Key Advantages of EIFER:</h4> -->
-              <!-- <ul>
-                <li>
-                  <b>Reconstructs Facial Expressions Under Occlusion:</b>
-                  EIFER uniquely addresses the challenge of sensor occlusion, accurately reconstructing facial expressions even when electrodes or other visual obstructions are present.
-                </li>
-                <li>
-                  <b>Combines Video and Muscle Activity Data:</b>
-                  By leveraging both video and muscle activity (sEMG) data, EIFER provides a more comprehensive and physiologically grounded fully data-driven understanding of facial expressions.
-                </li>
-                <li>
-                  <b>Enables Electrode-Free Facial Electromyography:</b>
-                  EIFER can predict muscle activity from facial expressions alone, paving the way for non-invasive, electrode-free facial electromyography in the future.
-                </li>
-                <li>
-                  <b>Provides Accurate 3D Facial Geometry and Appearance:</b>
-                  EIFER not only reconstructs a visually realistic face but also captures the underlying 3D geometry, providing richer data for analysis and synthesis.
-                </li>
-                <li>
-                  <b>Utilizes Advanced AI Techniques:</b>
-                  Built upon state-of-the-art 3D Morphable Models and unpaired image-to-image translation, EIFER represents a significant advancement in facial analysis technology.
-                </li>
-                <li>
-                  <b>Opens Doors for Multi-Modal Facial Analysis:</b>
-                  EIFER facilitates the integration of various data streams for a more holistic understanding of facial expressions, with potential applications in medicine, psychology, human-computer interaction, and animation.
-                </li>
-              </ul> -->
             </div>
           </div>
         </div>
       </div>
   </section>
-
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="columns is-centered">
           <div class="column is-full-width">
-            <h2 class="title is-4">Related Links</h2>
+            <h2 class="title is-3">Ablation Study</h2>
             <div class="content has-text-justified">
-              <p>
-                EIFER combines many ideas from recent works in computer vision, graphics, and machine learning. Here are some related works that you might find interesting:
+              <img src="./static/images/gerne.png" alt="GERNE Method" class="interpolation-image" width="auto" />
+              <p style="line-height: 1.6;">
+                (a) Sample images from the Waterbirds classification task. Most landbird images appear with land backgrounds (i.e., y=1, a=1), while most waterbird images appear with water backgrounds (i.e., y=2, a=2). This correlation between bird class and background introduces spurious correlations in the dataset.<br>
+                (b) Visualization of batch construction. <em>B<sub>b</sub></em> shows a biased batch where the majority of images from class y=1 (top row) have attribute a=1 (yellow), and most images from class y=2 (bottom row) have attribute a=2 (light-blue). <em>B<sub>lb</sub></em> represents a less biased batch, with a more balanced attribute distribution within each class, controlled by <em>c</em> (here c=1/2). <em>B<sub>rs</sub></em> depicts a group-balanced distribution and refers to a batch sampled using the Resampling method. <em>B<sub>ext</sub></em> simulates GERNE's batch with c · (β + 1) > 1, where the dataset’s minority group appears as the majority in the batch.<br>
+                (c) A simplified 2D representation of gradient extrapolation where θ ∈ ℝ². ∇<sub>θ</sub>ℒ<sub>b</sub> is the gradient computed on <em>B<sub>b</sub></em>; training with this gradient is equivalent to training with the ERM objective. ∇<sub>θ</sub>ℒ<sub>lb</sub> is computed on <em>B<sub>lb</sub></em>. ∇<sub>θ</sub>ℒ<sub>rs</sub> is the gradient computed on <em>B<sub>rs</sub></em>, which is equivalent to an extrapolated gradient with c · (β + 1) = 1. Finally, ∇<sub>θ</sub>ℒ<sub>ext</sub> is our extrapolated gradient, with the extrapolation factor β modulating the degree of debiasing in conjunction with the strength of spurious correlations in the dataset.
               </p>
-              <ul>
-                <li>
-                  <b><a href="https://flame.is.tue.mpg.de/">FLAME</a></b> introduced a 3D Morphable Model that captures facial shape and expression variations.
-                </li>
-                <li>
-                  <b><a href="https://georgeretsi.github.io/smirk/">SMIRK</a></b> replaced the traditional appearance model with a neural renderer and decoupled the facial encoding into three sub-encoders.
-                </li>
-                <li>
-                  <b><a href="https://junyanz.github.io/CycleGAN/">CycleGAN</a></b> and <b><a href="https://dx.doi.org/10.1007/978-3-031-45382-3_22">MC-CycleGAN</a></b> are unpaired image-to-image translation methods that have inspired our adversarial training.
-                </li>
-                <li>
-                  <b><a href="https://deca.is.tue.mpg.de/">DECA</a></b>, <b><a href="https://emoca.is.tue.mpg.de/">EMOCAv2</a></b>, <b><a href="https://georgeretsi.github.io/smirk/">SMIRK</a></b>, <b><a href="https://github.com/sicxu/Deep3DFaceRecon_pytorch">Deep3DFace</a></b>, and <b><a href="https://github.com/unibas-gravis/Occlusion-Robust-MoFA">FOCUS</a></b> are all state-of-the-art methods for monocular 3D face reconstruction and analysis. We provide <b>Exp2EMG</b> and <b>EMG2Exp</b> models
-                  for these methods.
-                </li>
-              </ul>
             </div>
           </div>
         </div>
       </div>
   </section>
-
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
@@ -402,7 +244,7 @@
   <footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
-        <a class="icon-link" href="./static/files/EIFER.pdf">
+        <a class="icon-link" href="./static/files/GERNE_ICCV.pdf">
           <i class="fas fa-file-pdf"></i>
         </a>
         <a class="icon-link" href="https://timozen.github.io" class="external-link" disabled>
