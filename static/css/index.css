@@ -1,0 +1,295 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url(../webfonts/OpenSans.ttf);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+
+.footer .icon-link {
+    font-size: 25px;
+    color: #000;
+}
+
+.link-block a {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.teaser .hero-body {
+  padding-top: 0;
+  padding-bottom: 3rem;
+}
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.publication-banner {
+  max-height: parent;
+
+}
+
+.publication-banner video {
+  position: relative;
+  left: auto;
+  top: auto;
+  transform: none;
+  object-fit: fit;
+}
+
+.publication-title {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.publication-authors {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.publication-venue {
+    color: #555;
+    /* width: fit-content; */
+    font-weight: bold;
+}
+
+.publication-awards {
+    color: #ff3860;
+    width: fit-content;
+    font-weight: bolder;
+}
+
+.publication-authors a {
+   color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+    text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
+}
+
+.publication-video {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 32.25%;
+
+    overflow: hidden;
+    border-radius: 10px !important;
+}
+
+.publication-video iframe {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 1000px;
+    height: 300px;
+}
+
+.results-carousel {
+  overflow: hidden;
+
+}
+
+.results-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+  padding: 0;
+  height: inherit;
+}
+
+.results-carousel .item img {
+  cursor: pointer;
+}
+
+.results-carousel .item .caption {
+  margin: 10px;
+  padding: 0px;
+  font-size: 1rem;
+}
+
+.results-carousel video {
+  margin: 0;
+}
+
+
+.interpolation-panel {
+  background: #f5f5f5;
+  border-radius: 10px;
+}
+
+.interpolation-panel .interpolation-image {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+.interpolation-panel .slider {
+  margin: 0 !important;
+}
+
+#interpolation-image-wrapper {
+  width: 100%;
+}
+#interpolation-image-wrapper img {
+  border-radius: 5px;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+  cursor: pointer;
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: auto;
+  max-width: auto;
+  cursor: default;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(270deg, #5f6fff, #047a8a, #f76f4e, #c07134);
+  background-size: 800% 800%;
+  animation: gradientBackground 15s ease infinite;
+}
+
+
+@media screen {
+  /* "Spotlight Badge */
+  .spotbox {
+    width: 800x; height: auto;
+    position: relative;
+    border: 1px solid #FFF;
+    background: #FFF;
+    margin: 20px;
+    display: inline-block;
+  }
+
+  .spotlight:after {
+    content: "CVPR Highlight";
+    z-index: 1;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    /* border: 1px solid #000; */
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 30px;
+    transform: rotate(45deg);
+    width: 200px;
+    display: block; 
+    background: #DAA520;
+    background: linear-gradient(#FFD700 0%, #DAA520 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: 30px; right: -90px;
+    clip-path: polygon(200px 30px, 170px -0px, 30px -0px, 0px 30px, 10px 30px,  110px 30px)
+  }
+}
+
+@media (max-width: 600px) {
+  /* "Spotlight Badge */
+  .spotbox {
+    width: 800x; height: auto;
+    position: relative;
+    border: 1px solid #FFF;
+    background: #FFF;
+    margin: 20px;
+    display: inline-block;
+  }
+
+  .spotlight:after {
+    content: "CVPR Highlight";
+    z-index: 1;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
+    color: #FFF;
+    text-transform: uppercase;
+    text-align: center;
+    line-height: 30px;
+    transform: rotate(0deg);
+    display: block; 
+    background: #DAA520;
+    background: linear-gradient(#FFD700 0%, #DAA520 100%);
+    box-shadow: 0 3px 10px -5px rgba(0, 0, 0, 1);
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .title.is-1 {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .title.is-2 {
+    font-size: 2.0rem;
+  }
+  .publication-video iframe {
+    width: 380px;
+    /* height: 350px; */
+    object-fit: contain;
+    /* transform: scale(0.); */
+    position: absolute;
+    top: -90px;
+    left: 0;
+    /* width: 1000px; */
+    /* height: 300px; */
+  }
+}
