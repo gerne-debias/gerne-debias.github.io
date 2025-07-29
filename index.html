@@ -161,23 +161,6 @@
     </div>
   </section> -->
   <section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered">
-      <div class="column has-text-centered">
-        <div class="content">
-          <div class="publication-video">
-            <img src="./static/images/gerne.png" alt="GERNE Image" width="800" />
-          </div>
-          <p style="font-size: 0.95rem;" class="is-centered">
-            <strong>Bridging the gap between mimics and muscles:</strong>
-            Our method <strong style="color: rgb(83, 83, 207);">EIFER</strong> utilizes neural unpaired image-to-image translation to decouple facial geometry and appearance for muscle-activity-based expression synthesis and electrode-free facial electromyography.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-  <section class="section">
     <div class="container is-max-desktop">
       <!-- Abstract. -->
       <div class="columns is-centered has-text-centered">
@@ -297,7 +280,6 @@
       </div>
     </div>
   </section>
-
   <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
@@ -305,23 +287,14 @@
           <div class="column is-full-width">
             <h2 class="title is-3">Method</h2>
             <div class="content has-text-justified">
-              <img src="./static/images/eifer_method.jpg" alt="EIFER Method" class="interpolation-image" width="auto" />
+              <img src="./static/images/gerne.png" alt="GERNE Method" class="interpolation-image" width="auto" />
               <p style="line-height: 1.6;">
-                <b>EIFER (Electromyography-Informed Facial Expression Reconstruction)</b> introduces a novel approach for facial expression analysis that addresses the challenges posed by surface electromyography (sEMG) electrode occlusion.
-                Our method is grounded in the principle of decoupling facial geometry and appearance, achieved through a neural unpaired image-to-image translation framework, see the above figure.
-                EIFER leverages <b>3D Morphable Models (3DMMs)</b>, specifically <b>FLAME</b> , to provide a parametric representation of facial shape and expression.
-                <u>We see the 3DMM expression space and muscle activity as the missing link between computer animation and physiologically-grounded facial expression analysis.</u>
+                (a) Sample images from the Waterbirds classification task. Most landbird images appear with land backgrounds (i.e., y=1, a=1), while most waterbird images appear with water backgrounds (i.e., y=2, a=2). This correlation between bird class and background introduces spurious correlations in the dataset.<br>
+                (b) Visualization of batch construction. <em>B<sub>b</sub></em> shows a biased batch where the majority of images from class y=1 (top row) have attribute a=1 (yellow), and most images from class y=2 (bottom row) have attribute a=2 (light-blue). <em>B<sub>lb</sub></em> represents a less biased batch, with a more balanced attribute distribution within each class, controlled by <em>c</em> (here c=1/2). <em>B<sub>rs</sub></em> depicts a group-balanced distribution and refers to a batch sampled using the Resampling method. <em>B<sub>ext</sub></em> simulates GERNE's batch with c · (β + 1) > 1, where the dataset’s minority group appears as the majority in the batch.<br>
+                (c) A simplified 2D representation of gradient extrapolation where θ ∈ ℝ². ∇<sub>θ</sub>ℒ<sub>b</sub> is the gradient computed on <em>B<sub>b</sub></em>; training with this gradient is equivalent to training with the ERM objective. ∇<sub>θ</sub>ℒ<sub>lb</sub> is computed on <em>B<sub>lb</sub></em>. ∇<sub>θ</sub>ℒ<sub>rs</sub> is the gradient computed on <em>B<sub>rs</sub></em>, which is equivalent to an extrapolated gradient with c · (β + 1) = 1. Finally, ∇<sub>θ</sub>ℒ<sub>ext</sub> is our extrapolated gradient, with the extrapolation factor β modulating the degree of debiasing in conjunction with the strength of spurious correlations in the dataset.
               </p>
-              <p style="line-height: 1.6;">
-                For monocular 3D face reconstruction, EIFER employs <b>neural differential rendering</b> and utilizes pre-trained <b>SMIRK</b> encoder networks.
-                These encoders, consisting of sub-encoders based on MobileNetV3 backbones, estimate 3DMM parameters (shape, expression, pose) from the sEMG electrode occluded input facial images.
-                The core of EIFER's occlusion handling lies in a <b>CycleGAN-like adversarial architecture</b> for unpaired image-to-image translation.
-                This architecture comprises generator and discriminator networks trained adversarially using unpaired sets of sEMG-occluded and occlusion-free (reference) facial images.
-                Crucially, EIFER learns a <b>bidirectional mapping</b> between the 3DMM expression parameter space and measured sEMG muscle activity through multi-layer perceptron (MLPs).
-                This bidirectional mapping enables both the synthesis of facial expressions from muscle activity and the prediction of muscle activity from observed facial expressions, effectively achieving electrode-free facial electromyography.
-              </p>
-              <h4 class="title">Key Advantages of EIFER:</h4>
-              <ul>
+              <!-- <h4 class="title">Key Advantages of EIFER:</h4> -->
+              <!-- <ul>
                 <li>
                   <b>Reconstructs Facial Expressions Under Occlusion:</b>
                   EIFER uniquely addresses the challenge of sensor occlusion, accurately reconstructing facial expressions even when electrodes or other visual obstructions are present.
@@ -346,7 +319,7 @@
                   <b>Opens Doors for Multi-Modal Facial Analysis:</b>
                   EIFER facilitates the integration of various data streams for a more holistic understanding of facial expressions, with potential applications in medicine, psychology, human-computer interaction, and animation.
                 </li>
-              </ul>
+              </ul> -->
             </div>
           </div>
         </div>
