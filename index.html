@@ -188,11 +188,11 @@
           <div class="column is-full-width">
             <h2 class="title is-3">Ablation Study</h2>
             <div class="content has-text-justified">
-              <img src="./static/images/gerne.png" alt="GERNE Method" class="interpolation-image" width="auto" />
+              <img src="./static/images/beta.png" alt="GERNE Method" class="interpolation-image" width="auto" />
               <p style="line-height: 1.6;">
-                (a) Sample images from the Waterbirds classification task. Most landbird images appear with land backgrounds (i.e., y=1, a=1), while most waterbird images appear with water backgrounds (i.e., y=2, a=2). This correlation between bird class and background introduces spurious correlations in the dataset.<br>
-                (b) Visualization of batch construction. <em>B<sub>b</sub></em> shows a biased batch where the majority of images from class y=1 (top row) have attribute a=1 (yellow), and most images from class y=2 (bottom row) have attribute a=2 (light-blue). <em>B<sub>lb</sub></em> represents a less biased batch, with a more balanced attribute distribution within each class, controlled by <em>c</em> (here c=1/2). <em>B<sub>rs</sub></em> depicts a group-balanced distribution and refers to a batch sampled using the Resampling method. <em>B<sub>ext</sub></em> simulates GERNE's batch with c · (β + 1) > 1, where the dataset’s minority group appears as the majority in the batch.<br>
-                (c) A simplified 2D representation of gradient extrapolation where θ ∈ ℝ². ∇<sub>θ</sub>ℒ<sub>b</sub> is the gradient computed on <em>B<sub>b</sub></em>; training with this gradient is equivalent to training with the ERM objective. ∇<sub>θ</sub>ℒ<sub>lb</sub> is computed on <em>B<sub>lb</sub></em>. ∇<sub>θ</sub>ℒ<sub>rs</sub> is the gradient computed on <em>B<sub>rs</sub></em>, which is equivalent to an extrapolated gradient with c · (β + 1) = 1. Finally, ∇<sub>θ</sub>ℒ<sub>ext</sub> is our extrapolated gradient, with the extrapolation factor β modulating the degree of debiasing in conjunction with the strength of spurious correlations in the dataset.
+                The impact of tuning <em>β</em> in debiasing the model (<em>β</em> ∈ {−1, 0, 1, 1.2}) is shown.  On the left column, we plot the training losses 
+                ℒ<sub>b</sub>, ℒ<sub>lb</sub>, and the target loss ℒ<sub>ext</sub>. 
+                On the right column, we plot the average accuracy of the minority and majority groups in both training and validation, as well as the average accuracy of the unbiased test set. Each plot represents the mean and standard deviation calculated over three runs with different random seeds.
               </p>
             </div>
           </div>
