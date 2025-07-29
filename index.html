@@ -143,7 +143,7 @@
     </div>
   </section>
 
-  <section class="section">
+  <!-- <section class="section">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
@@ -159,7 +159,24 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
+  <section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column has-text-centered">
+        <div class="content">
+          <div class="publication-video">
+            <img src="./static/images/gerne.png" alt="GERNE Image" width="800" />
+          </div>
+          <p style="font-size: 0.95rem;" class="is-centered">
+            <strong>Bridging the gap between mimics and muscles:</strong>
+            Our method <strong style="color: rgb(83, 83, 207);">EIFER</strong> utilizes neural unpaired image-to-image translation to decouple facial geometry and appearance for muscle-activity-based expression synthesis and electrode-free facial electromyography.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   <section class="section">
     <div class="container is-max-desktop">
       <!-- Abstract. -->
@@ -174,7 +191,7 @@
               GERNE serves as a general framework for debiasing, encompassing methods such as ERM, reweighting, and resampling, as special cases. 
               We derive the theoretical upper and lower bounds of the extrapolation factor employed by GERNE. By tuning this factor, GERNE can adapt to maximize either Group-Balanced Accuracy (GBA) or Worst-Group Accuracy (WGA). 
               We validate the proposed approach on five vision and one NLP benchmarks, demonstrating competitive and often superior performance compared to state-of-the-art baselines.
-              The code is available at: <a href="https://gerne-debias.github.io/" target="_blank">https://gerne-debias.github.io/</a>
+              <!-- The code is available at: <a href="https://gerne-debias.github.io/" target="_blank">https://gerne-debias.github.io/</a> -->
             </p>
           </div>
         </div>
@@ -409,14 +426,17 @@
   <section class="section" id="BibTeX">
     <div class="container is-max-desktop content is-centered has-text-justified">
       <h2 class="title">BibTeX (arXiv Preprint)</h2>
-      <span>
+      <!-- <span>
         If you find our work useful, utilize with our models, start your own research with our data set, or use our parts of our code, please cite our work:
-      </span>
-      <pre><code>@article{buchner2025electromyography,
-      title={Gradient Extrapolation for Debiased Representation Learning},
-      author={B{\"u}chner, Tim and Anders, Christoph and Guntinas-Lichius, Orlando and Denzler, Joachim},
-      journal={arXiv preprint arXiv:2503.09556},
-      year={2025}
+      </span> -->
+      <pre><code>@misc{asaad2025gradientextrapolationdebiasedrepresentation,
+      title={Gradient Extrapolation for Debiased Representation Learning}, 
+      author={Ihab Asaad and Maha Shadaydeh and Joachim Denzler},
+      year={2025},
+      eprint={2503.13236},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG},
+      url={https://arxiv.org/abs/2503.13236}, 
 }
 </code></pre>
     </div>
