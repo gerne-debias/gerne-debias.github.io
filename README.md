@@ -1,7 +1,7 @@
-# EIFER
+# GERNE
 
-This is the repository that contains source code for the [EIFER website](https://eifer-mam.github.io).
-It is based and updated from the [Nerfies website](https://nerfies.github.io)!
+This is the repository that contains source code for the [GERNE website](https://gerne-debias.github.io/).
+It is based and updated from the [EIFER website](https://eifer-mam.github.io) and [Nerfies website](https://nerfies.github.io)!
 
 ## Website License
 
